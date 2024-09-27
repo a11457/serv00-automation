@@ -38,6 +38,12 @@ time = datetime.now(beijing_timezone).strftime('%Y-%m-%d %H:%M:%S')
 menu = requests.get('https://api.zzzwb.com/v1?get=tg').json()
 loginip = requests.get('https://api.ipify.org?format=json').json()['ip']
 content += f"本次登录用户共： {user_num} 个\n登录时间：{time}\n登录IP：{loginip}"
+content = "这是波兰服务器挂机操作告示\n"
+
+
+
+
+
 
 push = os.getenv('PUSH')
 
