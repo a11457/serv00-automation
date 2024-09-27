@@ -30,8 +30,7 @@ hosts_info = json.loads(ssh_info_str)
 command = 'whoami'
 user_list, hostname_list = ssh_multiple_connections(hosts_info, command)
 user_num = len(user_list)
-content = "波兰服务器自动登录系统
-SSH服务器登录信息：\n"
+content = "波兰服务器自动登录系统，SSH服务器登录信息：\n"
 for user, hostname in zip(user_list, hostname_list):
     content += f"用户名：{user}，服务器：{hostname}\n"
 beijing_timezone = timezone(timedelta(hours=8))
